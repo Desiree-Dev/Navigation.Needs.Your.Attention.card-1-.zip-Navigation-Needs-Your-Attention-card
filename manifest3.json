@@ -1,0 +1,100 @@
+{
+	"_version": "1.14.0",
+	"sap.app": {
+		"id": "Navigation.Needs.Your.Attention.card",
+		"type": "card",
+		"title": "Needs your attension with navigation",
+		"subTitle": "Sample of a List with Highlight",
+		"applicationVersion": {
+			"version": "1.6.0"
+		},
+		"shortTitle": "A short title for this Card",
+		"info": "Additional information about this Card",
+		"description": "A long description for this Card",
+		"tags": {
+			"keywords": [
+				"List",
+				"Highlight",
+				"Card",
+				"Sample"
+			]
+		}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+		"icons": {
+			"icon": "sap-icon://list"
+		}
+	},
+	"sap.platform.mobilecards": {
+	    "compatible": true
+	},
+	"sap.card": {
+		"type": "List",
+		"header": {
+		"title": "Needs Your Attention",
+		"subTitle": "",
+		"icon": {
+		  "src": ""
+		},
+		"status": {
+		  "text": "5 of 11"
+		},
+		"actions": [
+				{
+					"type": "Navigation",
+					"parameters": {
+					    "ibnTarget": {
+								"semanticObject": "WorkflowTask",
+								"action": "DisplayMyInbox"
+							}
+					}
+				}
+			]
+		},
+	  	"content": {
+			"data": {
+				"json": [{
+						"Name": "Approve new laptop for Scott Lean",
+						"Description": "Due in 3 days",
+						"icon": "sap-icon://cart-approval",
+						"Highlight": "Success"
+					},
+					{
+						"Name": "Complete your purchase of office supplies",
+						"Description": "Due in 5 days",
+						"icon": "sap-icon://cart",
+						"Highlight": "Information"
+					},
+					{
+						"Name": "Submit Travel Expense Report",
+						"Description": "Due in 12 days",
+						"icon": "sap-icon://travel-expense",
+						"Highlight": "Information"
+					},
+					{
+						"Name": "Complete missing information in IT Ticket",
+						"Description": "Due in 12 days",
+					    "icon": "sap-icon://activity-items",
+						"Highlight": "Information"
+					},
+					{
+						"Name": "Mark ACME project as complete",
+						"Description": "Due in 12 days",
+						"icon": "sap-icon://capital-projects",
+						"Highlight": "Information"
+					}
+				]
+			},
+			"maxItems": 5,
+			"item": {
+				"title": "{Name}",
+				"description": "{Description}",
+				"highlight": "{Highlight}",
+				"icon": {
+					"src": "{icon}"
+				}
+			}
+		}
+	}
+}
